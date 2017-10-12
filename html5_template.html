@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTDHTML 4.01//EN" http://www.w3.org/TR/html4/strict.dtd> html4 문서타입 -->
+<!DOCTYPE html><!-- html5 문서타입-->
+
+<html><!-- html 시작을 의미-->
+<head><!-- 문서의 정보 or 문서를 꾸미거나 기능을 추가하기 위해 -->
+<meta charset="utf-8" /><!--언어 설정-->
+<title></title><!-- 사이트의 이름 / 페이지의 제목 -->
+<meta name="keywords" content="HTML, CSS, JQuery, MySQL, PHP" /><!-- 해당 문서에 사용된 대표 키워드 입력 -->
+<meta name="description" content="HTML작성시 많은 태그를 사용합니다." /><!-- 홈페이지 설명 -->
+</head>
+<body><!-- 웹문서에 표시될 내용을 작성-->
+  <p>Hello World!</p> <!--Paragraph, 단락 <-->
+  <b>Hello World!</b> <!--bold, 굵게-->
+  <i>Hello World!</i> <!-- 이텔릭, 오른쪽으로 기울어진 글씨체 작성-->
+  <u>Hello World!</u> <!-- 밑줄을 그을때 사용 -->
+  <strike>Hello World!</strike> <!-- 취소선 -->
+  <p>Hello <br />World!</p> <!-- 줄바꿈-->
+
+ <h1>Hello World!</h1> <!-- heading tag -->
+ <h2>Hello World!</h2>
+ <h3>Hello World!</h3>
+ <h4>Hello World!</h4>
+ <h5>Hello World!</h5>
+ <h6>Hello World!</h6>
+
+ <h1>HTML 소개</h1>
+  <p>HTML은 태그로 이루어진 웹의 가장 기본이 되는 언어입니다.
+    Hyper Text Markup Language의 줄임말로 여러버전을 거쳐 현재는 HTML5가 사용되고 있습니다.</p>
+
+
+<p><em>Once Upon a Time</em></p> <!-- 강조-->
+<ruby> <!-- 한자의 뜻과 음을 표시할때-->
+  泰<rt>클 태</rt>
+  永<rt>길 영</rt>
+</ruby>
+<img src="http://mybook.everdevel.com/images/happyCat.png" width="100" alt="happy cat"><!--이미지 삽입-->
+<a href="http://www.naver.com" target="_blank">네이버로 이동</a><!-- 새창으로 오픈-->
+<a href="http://www.naver.com" target="_self">네이버로 이동</a><!-- 현 페이지에서 오픈-->
+<a href="http://www.naver.com" target="_blank">
+  <img src="http://mybook.everdevel.com/images/happyCat.png" alt="happycat" />
+</a><!--이미지 클릭시 이동-->
+<!-- <a href="이동할주소" ping="통계 기록을 수집 구현한 프로그램의 주소">링크명</a> -->
+
+<h1>번호가 붙는 리스트 ol태그</h1>
+<ol>
+    <li>html5</li><li>css3</li><li>jquery</li><li>mysql</li><li>php</li>
+</ol>
+<h1>번호가 붙지 않는 리스트 ul태그</h1>
+<ul>
+    <li>html5</li><li>css3</li><li>jquery</li><li>mysql</li><li>php</li>
+</ul>
+
+<!-- <form name="폼 태그 이름" method="데이터 전송 방식" action="정보를 보낼 주소"></form>
+name속성에는 해당 폼 태그의 이름을 작성 ex) signUp, join, poll
+method 작성한 정보를 어떤 방식으로 보낼지 결정 ex) GET, POST
+action 작성한 정보를 어디로 보낼 것인가/해당 정보는 php파일로 전송, 정보 처리는 PHP에 작성한 소스가 처리
+-->
+
+<!-- <input type="타입" name="입력 폼의 이름" maxlength="최대 입력 가능 글자 수" />
+type id입력폼 or password입력폼
+name 입력폼 이름
+maxlength 최대 입력가능 글자 수
+-->
+아이디<input type="text" name="UserID" maxlength="10" />
+비밀번호<input type="password" name="Userpw" maxlength="14" />
+<!-- type 속성값이 checkbox이면 체크박스 폼
+<input type="checkbox" name="입력 폼의 이름" value="값" /> -->
+<h2>취미</h2>
+음악감상<input type="checkbox" name="myHobby" value="music" checked/>
+영화감상<input type="checkbox" name="myHobby" value="movie" />
+수집<input type="checkbox" name="myHobby" value="collection" />
+
+<!--type 속성값이 button이면 버튼박스-->
+<input type="button" value="약관을 보시려면 누르세요." />
+<!-- 버튼을 눌렀을 때 작동하게 하려면 JQuery를 사용해야 합니다.-->
+
+<!-- type 속성값이 file이면 파일 업로드-->
+<input type="file" name="attachedFile" />
+
+<!-- type 속성값이 search면 검색어 입력 폼-->
+<input type="search" name="search" />
+
+<!-- type 속성값이 reset이면 폼의 입력값 초기화-->
+<form name="sighUp" method="post" action="signup.php">
+  아이디<input type="text" name="userid" value="" />
+  <input type="reset" value="다시입력" />
+</form>
+
+<!-- type 속성값이 submit이면 폼의 입력값 전송-->
+<form name="signup" method="post" action="signup.php">
+<input type="text" name="userid" value="myid" />
+<input type="submit" value="완료" />
+</form>
+
+<!-- type 속성값이 email이면 email 입력에 사용-->
+<form name="signUp" method="post" action="signup.php">
+  E-mail:
+  <input type="email" name="email" />
+  <input type="submit"/>
+</form>
+
+<!-- type 속성값이 url이면 url 입력에 사용 -->
+<form name="signUp" method="post" action="signup.php">
+  <input type="url" />
+  <input type="submit" value="submit" />
+</form>
+
+<!-- type 속성값이 number면 숫자 입력에 사용
+스마트폰에서 숫자 키패드가 나오게 할려면 pattern="\d*" 사용-->
+<form name="signUp" method="post" action="signup.php">
+  <input type="number" pattern="\d*"/>
+  <input type="submit" value="submit" />
+</form>
+
+<!-- type 속성값이 color면 색지정 -->
+<form name="signUp" method="post" action="signup.php">
+<input type="color" />
+</form>
+
+<!-- type 속성값이 range면 슬라이드 방식의 수를 출력하는 ui-->
+<input type="range" min="0" max="100" value="50" step="10" />
+
+<!-- input 태그의 placeholder 옵션-->
+<input type="text" placeholder="아이디입력" />
+
+<!--label 태그 사용법-
+<label for="input태그의 id 속성값">명칭</label>
+<input type="radio" name="gd" value="w" id="이 페이지에서 사용할 고유한 이름" />
+ex ) gender= male, woman-->
+<label for="woman">여성</label>
+<input type="radio" name="gd" value="w" id="woman" />
+<label for="man">남성</label>
+<input type="radio" name="gd" value="m" id="man" />
+
+<!-- select tag-->
+<select name="birthMonth">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+</select>
+
+<div style="background:skyblue">in div tag1</div>
+<div style="background:hotpink">in div tag2</div>
+<br />
+<span style="background:skyblue">in span tag1</span>
+<span style="background:hotpink">in span tag2</span>
+
+
+<header>
+  <div id="logo">My web service</div>
+  <ul>
+    <li>my menu 1</li>
+    <li>my menu 2</li>
+    <li>my menu 3</li>
+    <li>my menu 4</li>
+  </ul>
+
+<footer>
+  <ul>
+    <li>회사소개</li>
+    <li>기업윤리</li>
+    <li>인재채용</li>
+  </ul>
+  <p>copyright my web service</p>
+</footer>
+</header>
+</body>
+</html>
